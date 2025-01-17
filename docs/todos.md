@@ -1,31 +1,41 @@
 # To-Do List
 
-## Frontend
-- [x] Design and implement the landing page using Next.js and Tailwind CSS.
-- [x] Add responsive design elements for desktop and mobile views.
-- [x] Implement an email capture form (connected to Supabase).
-- [x] Set up basic branding (logo, color scheme, typography).
+## Frontend ✅
+- [x] Design and implement the landing page using Next.js and Tailwind CSS
+- [x] Add responsive design elements for desktop and mobile views
+- [x] Implement email capture form UI
+- [x] Set up shadcn components (Button, Input, Toast, Card)
+- [x] Implement form validation and loading states
 
-## Backend
-- [x] Configure Supabase project and link to Next.js API routes.
-- [x] Implement a basic API endpoint to save captured emails.
-- [ ] Set up authentication endpoints (sign-up, sign-in).
-- [ ] Create database schema for user goals, progress, and summaries.
-  
-## Full-Stack
-- [ ] Integrate Anthropic's API via a serverless route for the chatbot.
-- [ ] Create logic for storing user's ACT values and goals in Supabase.
-- [ ] Implement a function to generate weekly summaries and store them in the database.
-- [ ] Implement retrieval of user progress and passing it to the chatbot prompts.
+## Backend (In Progress)
+- [x] Set up basic API route for email subscription
+- [x] Implement error handling in API routes
+- [ ] Set up Supabase connection
+- [ ] Create emails table in Supabase
+- [ ] Test email storage functionality
 
-## Other / DevOps
-- [ ] Set up hosting on Vercel.
-- [ ] Implement environment variables for API keys (Anthropic, Supabase).
-- [ ] Configure GitHub actions for CI/CD (optional at this stage).
+## DevOps & Configuration
+- [x] Set up Next.js 14 project with TypeScript
+- [x] Configure Tailwind CSS
+- [x] Install and configure shadcn/ui
+- [ ] Set up Supabase environment variables
+- [ ] Deploy to Vercel
 
 ## Immediate Next Steps
-- [ ] Fix component import errors by installing shadcn components
-- [ ] Install @supabase/supabase-js package
-- [ ] Set up environment variables for Supabase
-- [ ] Create emails table in Supabase
-- [ ] Test email capture form functionality
+1. Set up Supabase:
+   - [ ] Create Supabase project
+   - [ ] Add environment variables
+   - [ ] Create emails table
+2. Testing:
+   - [ ] Test email capture end-to-end
+   - [ ] Test error handling
+   - [ ] Test loading states
+3. Deployment:
+   - [ ] Deploy to Vercel
+   - [ ] Configure production environment variables
+
+## Future Features
+- [ ] Authentication system
+- [ ] Chatbot integration with Anthropic's API
+- [ ] Goal tracking features
+- [ ] Weekly summaries

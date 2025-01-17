@@ -23,18 +23,22 @@ export default function EmailCaptureForm() {
         body: JSON.stringify({ email }),
       })
 
-      if (!response.ok) throw new Error('Subscription failed')
+      const data = await response.json()
 
-      toast({
-        title: "Success!",
-        description: "Thanks for joining our waitlist. We'll be in touch soon!",
-      })
-      setEmail("")
+      if (response.ok) {
+        toast({
+          title: "Success!",
+          description: "Thanks for joining our waitlist. We'll be in touch soon!",
+        })
+        setEmail("")
+      } else {
+        throw new Error(data.error || 'Something went wrong')
+      }
     } catch (error) {
       toast({
-        title: "Error",
-        description: "Something went wrong. Please try again.",
         variant: "destructive",
+        title: "Error",
+        description: error instanceof Error ? error.message : "Something went wrong",
       })
     } finally {
       setLoading(false)
@@ -50,6 +54,7 @@ export default function EmailCaptureForm() {
         onChange={(e) => setEmail(e.target.value)}
         required
         className="flex-1"
+        disabled={loading}
       />
       <Button type="submit" disabled={loading}>
         {loading ? "Joining..." : "Join Waitlist"}

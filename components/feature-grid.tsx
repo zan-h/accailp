@@ -19,9 +19,9 @@ export default function FeatureGrid() {
   ]
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="grid gap-8 w-full">
       {features.map((feature, index) => (
-        <div key={index} className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
+        <div key={index} className="p-6 border-b">
           <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
           <p className="text-gray-600">{feature.description}</p>
         </div>
