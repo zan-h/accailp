@@ -21,9 +21,9 @@ export default function FeatureGrid() {
   return (
     <div className="grid gap-8 w-full">
       {features.map((feature, index) => (
-        <div key={index} className="p-6 border-b">
-          <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-          <p className="text-gray-600">{feature.description}</p>
+        <div key={index} className="p-6 border-b border-white/20 backdrop-blur-sm bg-black/30 rounded-lg">
+          <h3 className="text-xl font-semibold mb-2 text-white">{feature.title}</h3>
+          <p className="text-gray-200">{feature.description}</p>
         </div>
       ))}
     </div>
