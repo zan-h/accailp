@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server"
+import { supabase } from "@/lib/supabase"
 
 export async function POST(req: Request) {
   try {
@@ -11,16 +12,35 @@ export async function POST(req: Request) {
       )
     }
 
-    // TODO: Add your email subscription logic here
-    // For now, we'll simulate success
+    // Insert email into Supabase
+    const { error } = await supabase
+      .from('waitlist')
+      .insert([
+        { 
+          email,
+          signed_up_at: new Date().toISOString()
+        }
+      ])
+
+    if (error) {
+      // Handle unique constraint violation
+      if (error.code === '23505') {
+        return NextResponse.json(
+          { error: "You're already on the waitlist!" },
+          { status: 400 }
+        )
+      }
+      throw error
+    }
     
     return NextResponse.json(
       { message: "Subscription successful" },
       { status: 200 }
     )
   } catch (error) {
+    console.error('Subscription error:', error)
     return NextResponse.json(
-      { error: "Internal server error" },
+      { error: "Failed to join waitlist. Please try again." },
       { status: 500 }
     )
   }

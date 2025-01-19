@@ -40,13 +40,15 @@ export default function Home() {
         {/* Hero Section */}
         <section className="py-20">
           <h1 className="text-[56px] font-semibold leading-tight mb-4 text-white">
-            Voice AI for <span className="text-blue-400">Emotional Work</span>
+            Accounability AI for <span className="text-blue-400">Peak Performance</span>
           </h1>
           <p className="text-xl text-gray-200 mb-8">
-            Accai guides you through emotional blocks and into flow.
+            Break through blocks, hit meaningful goals, and celebrate your wins — Accai makes productivity effortless and personal
           </p>
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700">Talk to Accai</Button>
-          <p className="mt-4 text-gray-300">Your first 60 minutes are free</p>
+          <div className="max-w-md mx-auto">
+            <EmailCaptureForm />
+            <p className="mt-4 text-gray-300">Join our waitlist for early access</p>
+          </div>
         </section>
 
         {/* Main Section */}
