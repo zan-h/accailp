@@ -95,12 +95,6 @@ export default function Home() {
 
         {/* How It Works */}
         <HowItWorks />
-
-        {/* Email Capture */}
-        <section className="py-20">
-          <h2 className="text-2xl font-semibold mb-8 text-white">Join Our Waitlist</h2>
-          <EmailCaptureForm />
-        </section>
       </div>
     </div>
   )
