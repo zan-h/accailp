@@ -1,20 +1,20 @@
 export default function FeatureGrid() {
   const features = [
     {
-      title: "Make a Decision",
-      description: "Allow answers to your deep questions to emerge from attuning to your felt sense.",
+      title: "Emotional Support",
+      description: "Accai uses emotional frameworks and therapeutic principles (like ACT) to help you work through blocks and maintain well-being",
       gradient: "from-green-400/20 to-green-500/20",
       icon: "🔄"
     },
     {
-      title: "Resolve Stuck Feelings",
-      description: "Find freedom through exploring the nature of your beliefs.",
+      title: "Personalised Goals",
+      description: "Define your own frameworks (SMART, OKRs, or value-based) and let Accai provide tailored milestones and reminders",
       gradient: "from-orange-400/20 to-orange-500/20",
       icon: "🔓"
     },
     {
-      title: "Understand a Trigger",
-      description: "Freely express yourself in a judgment-free environment, deepening your self-compassion.",
+      title: "Weekly Summaries",
+      description: "Accai compiles your progress into weekly summaries—celebrating wins, highlighting areas to improve, and keeping you accountable.",
       gradient: "from-purple-400/20 to-purple-500/20",
       icon: "⚡"
     }

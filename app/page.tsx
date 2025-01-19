@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import EmailCaptureForm from "@/components/email-capture-form"
 import FeatureGrid from "@/components/feature-grid"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -29,8 +30,33 @@ export default function Home() {
             <Button variant="ghost" className="text-white hover:bg-white/10">Contact Us</Button>
           </div>
           <div className="flex items-center gap-4">
-            <Button variant="ghost" className="text-white hover:bg-white/10">Sign in</Button>
-            <Button className="bg-blue-600 hover:bg-blue-700">Try Now</Button>
+            <Link 
+              href="https://medium.com/@accai" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button 
+                variant="ghost" 
+                className="text-white hover:bg-white/10 flex items-center gap-2"
+              >
+                Blog
+                <svg 
+                  width="12" 
+                  height="12" 
+                  viewBox="0 0 12 12" 
+                  fill="none" 
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path 
+                    d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" 
+                    stroke="currentColor" 
+                    strokeWidth="1.5" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </Button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -54,12 +80,12 @@ export default function Home() {
         {/* Main Section */}
         <section className="pt-8 pb-20">
           <h2 className="text-[40px] font-semibold mb-4 text-white">
-            The Right Question Can Change Everything
+            What have you been putting off? 
           </h2>
           <p className="text-xl text-gray-200 max-w-3xl">
-            Accai helps you resolve challenging feelings and understand yourself better. 
-            It draws inspiration from Somatic Coaching, Internal Family Systems, 
-            Attachment Theory, Focusing, and more.
+            Accai helps you resolve challenging blocks and feelings to help you understand yourself better.  
+            It draws inspiration from frameworks within Acceptance and Commitment Therapy, Somatics, Internal Family Systems, 
+            Attachment Theory, and more.
           </p>
         </section>
 
