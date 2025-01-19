@@ -38,7 +38,7 @@ export default function Home() {
       {/* Content Container */}
       <div className="relative w-full max-w-7xl mx-auto px-6 flex flex-col items-center text-center z-10">
         {/* Hero Section */}
-        <section className="py-20">
+        <section className="pt-32 pb-12">
           <h1 className="text-[56px] font-semibold leading-tight mb-4 text-white">
             Accounability AI for <span className="text-blue-400">Peak Performance</span>
           </h1>
@@ -52,7 +52,7 @@ export default function Home() {
         </section>
 
         {/* Main Section */}
-        <section className="py-20">
+        <section className="pt-8 pb-20">
           <h2 className="text-[40px] font-semibold mb-4 text-white">
             The Right Question Can Change Everything
           </h2>

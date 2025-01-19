@@ -1,13 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { useToast } from "@/components/ui/use-toast"
 
 export default function EmailCaptureForm() {
   const [email, setEmail] = useState("")
   const [loading, setLoading] = useState(false)
+  const [isSuccess, setIsSuccess] = useState(false)
   const { toast } = useToast()
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -26,11 +25,14 @@ export default function EmailCaptureForm() {
       const data = await response.json()
 
       if (response.ok) {
+        setIsSuccess(true)
         toast({
           title: "Success!",
           description: "Thanks for joining our waitlist. We'll be in touch soon!",
         })
         setEmail("")
+        // Reset success state after 3 seconds
+        setTimeout(() => setIsSuccess(false), 3000)
       } else {
         throw new Error(data.error || 'Something went wrong')
       }
@@ -46,19 +48,25 @@ export default function EmailCaptureForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex w-full max-w-sm space-x-2">
-      <Input
-        type="email"
-        placeholder="Enter your email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-        className="flex-1"
-        disabled={loading}
-      />
-      <Button type="submit" disabled={loading}>
-        {loading ? "Joining..." : "Join Waitlist"}
-      </Button>
-    </form>
+    <div className="subscription-container">
+      <form onSubmit={handleSubmit} className="form-wrapper">
+        <input
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          className="email-input"
+          disabled={loading}
+        />
+        <button 
+          type="submit" 
+          className={`subscribe-btn ${isSuccess ? 'success' : ''}`}
+          disabled={loading}
+        >
+          {loading ? "Joining..." : isSuccess ? "Success! ✨" : "Join Waitlist"}
+        </button>
+      </form>
+    </div>
   )
 } 
