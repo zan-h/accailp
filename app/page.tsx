@@ -96,6 +96,18 @@ export default function Home() {
         {/* How It Works */}
         <HowItWorks />
       </div>
+
+      {/* Footer */}
+      <footer className="relative w-full py-4 px-6 z-10 mt-auto">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <div className="text-gray-200">© 2025 Accai. All rights reserved.</div>
+          <div className="flex items-center gap-4">
+            <Button variant="ghost" className="text-gray-200 hover:bg-white/10">
+              Contact
+            </Button>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 } 
