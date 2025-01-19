@@ -3,6 +3,7 @@ import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/ca
 import EmailCaptureForm from "@/components/email-capture-form"
 import FeatureGrid from "@/components/feature-grid"
 import Link from "next/link"
+import HowItWorks from "@/components/how-it-works"
 
 export default function Home() {
   return (
@@ -91,6 +92,9 @@ export default function Home() {
 
         {/* Features */}
         <FeatureGrid />
+
+        {/* How It Works */}
+        <HowItWorks />
 
         {/* Email Capture */}
         <section className="py-20">
