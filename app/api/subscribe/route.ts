@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { supabase } from '@/lib/supabase'
+import { supabase } from '@/supabase'
 
 export async function POST(req: Request) {
   try {
@@ -31,7 +31,7 @@ export async function POST(req: Request) {
     }
 
     console.log('Supabase connection successful')
-
+console.log("testData", testData)
     // Attempt to insert the email
     const { error } = await supabase
       .from('waitlist')

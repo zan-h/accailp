@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button"
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import EmailCaptureForm from "@/components/email-capture-form"
 import Link from "next/link"
 import HowItWorks from "@/components/how-it-works"
